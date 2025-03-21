@@ -15,11 +15,11 @@ jobs:
       - name: Print Issue Data
         run: |
           echo "Repository Name: ${{ github.event.issue.body }}"
-          echo "Issue Title: ${{ github.event.issue.title }}"
+          #echo "Issue Title: ${{ github.event.issue.title }}"
           
-          # Extract the repository name from the body using regex or other methods
-          REPO_NAME=$(echo "${{ github.event.issue.body }}" | grep -oP '(?<=📌 Repository Name: ).*')
-          REPO_TYPE=$(echo "${{ github.event.issue.body }}" | grep -oP '(?<=📂 Repository Type: ).*')
+          ## Extract the repository name from the body using regex or other methods
+          #REPO_NAME=$(echo "${{ github.event.issue.body }}" | grep -oP '(?<=📌 Repository Name: ).*')
+          #REPO_TYPE=$(echo "${{ github.event.issue.body }}" | grep -oP '(?<=📂 Repository Type: ).*')
 
-          echo "Extracted Repository Name: $REPO_NAME"
-          echo "Extracted Repository Type: $REPO_TYPE"
+          #echo "Extracted Repository Name: $REPO_NAME"
+          #echo "Extracted Repository Type: $REPO_TYPE"
