@@ -1,0 +1,32 @@
+name: Repository Creation Request
+description: Request a new repository with specific configurations.
+title: "[Repo Request]: "
+labels: ["repo-request"]
+body:
+  - type: input
+    id: repo_name
+    attributes:
+      label: "📌 Repository Name"
+      description: "Enter the name of the repository"
+      placeholder: "example-repo"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: repo_type
+    attributes:
+      label: "📂 Repository Type"
+      description: "Select the type of repository"
+      options:
+        - EKS Cluster
+        - Kubernetes Manifests
+        - AWS Lambda
+    validations:
+      required: true
+
+  - type: textarea
+    id: additional_info
+    attributes:
+      label: "📝 Additional Information"
+      description: "Add any extra details (optional)"
+      placeholder: "Describe any special requirements"
