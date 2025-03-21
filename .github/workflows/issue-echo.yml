@@ -16,8 +16,8 @@ jobs:
         run: |
           echo "Issue Title: ${{ github.event.issue.title }}"
           
-          REPO_NAME=$(echo "${{ github.event.issue.body.repo_name }}" | grep '### 📌 Repository Name' -v | tail -n 1)
-          REPO_TYPE=$(echo "${{ github.event.issue.body.repo_type }}" | grep '### 📂 Repository Type' -v | tail -n 1)
+          REPO_NAME=$(echo "${{ github.event.issue.body }}" | grep '### 📌 Repository Name' -v | tail -n 1)
+          REPO_TYPE=$(echo "${{ github.event.issue.body }}" | grep '### 📂 Repository Type' -v | tail -n 1)
  
           echo "Extracted Repository Name: $REPO_NAME"
           echo "Extracted Repository Type: $REPO_TYPE"
