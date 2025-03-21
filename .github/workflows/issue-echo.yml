@@ -14,7 +14,7 @@ jobs:
 
       - name: Print Issue Data
         run: |
-          #echo "Issue Title: ${{ github.event.issue.title }}"
+          echo "Issue Title: ${{ github.event.issue.title }}"
           
           REPO_NAME=$(echo "${{ github.event.issue.body }}" | grep -oP '(?<=📌 Repository Name: ).*')
           REPO_TYPE=$(echo "${{ github.event.issue.body }}" | grep -oP '(?<=📂 Repository Type: ).*')
